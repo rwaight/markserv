@@ -4,12 +4,24 @@
 
 > :checkered_flag: serve markdown as html (GitHub style), index directories, and live-reload as you edit
 
+#### Updates to this code
+
+This repo is current as of https://github.com/markserv/markserv/commit/2774d431b3be277a0c7d90199efd688f6f11425e
+
+##### Updated on 29JUL2024
+
+The update includes the **Docker** and **docker-compose** configurations from https://github.com/markserv/markserv/pull/120/files
+
+#### Source repo badges
+
+```
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-FF69B4.svg?style=flat-square&logo=gitter-white&link=https://gitter.im/markserv)](https://gitter.im/markserv)
 [![CHANGELOG](https://img.shields.io/badge/changelog-&nbsp;✔️-orange.svg?style=flat-square)](CHANGELOG.md)
 [![Build Status](https://travis-ci.org/markserv/markserv.svg?branch=master&style=flat-square)](https://travis-ci.org/markserv/markserv)
 [![Coverage Status](https://coveralls.io/repos/github/markserv/markserv/badge.svg?branch=master&style=flat-square)](https://coveralls.io/github/markserv/markserv?branch=master) [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors) [![Npm Version](https://img.shields.io/npm/v/markserv.svg?style=flat-square)](https://www.npmjs.com/package/markserv)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/sindresorhus/xo)
 [![Known Vulnerabilities](https://snyk.io/test/github/markserv/markserv/badge.svg?style=flat-square)](https://snyk.io/test/github/markserv/markserv)
+```
 
 <p align="center">
 	<img alt="Markserv Demo" src="media/markserv-demo.gif" width="100%">
@@ -30,7 +42,17 @@ Supporting: [MathJax](tests/mathjax.md), [Chinese Characters](tests/测试.md), 
 	<img alt="Markserv directory index" src="media/markserv-directory-listing.png" width="100%">
 </p>
 
-## :computer: Installation
+## :whale2: Usage (Docker)
+
+Place the files to serve in the `./files` directory or [edit the mount point](./docker-compose.yml#L8) and run the following command.
+
+```shell
+docker-compose up --build -d
+```
+
+You can access Markserv at `http://localhost:8080`
+
+## :computer: Installation (CLI)
 
 ```shell
 # NPM
@@ -40,7 +62,7 @@ $ npm i -g markserv
 $ yarn global add markserv
 ```
 
-## :joystick: Usage
+## :joystick: Usage (CLI)
 
 To start Markserv from the CLI
 
